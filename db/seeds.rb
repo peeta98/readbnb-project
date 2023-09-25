@@ -26,6 +26,19 @@ request["X-RapidAPI-Host"] = 'book-finder1.p.rapidapi.com'
 
 response = http.request(request)
 book_api = JSON.parse(response.read_body) # Transform String to an array of hashes
+
+# ----- Seeding instances of User -----
+puts "Creating 1 user"
+User.create!(
+  username: "Peeta98",
+  email: "pedro@gmail.com",
+  password: "secret",
+  gender: "Male",
+  age: 25
+)
+puts "User created!"
+
+# ----- Seeding Book instances -----
 puts "Creating books..."
 book_api["results"].each do |book|
   Book.create!(
