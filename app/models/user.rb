@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :user_books
-  has_many :reviews
+  has_many :user_books, dependent: :destroy
+  has_many :reviews, dependent: :destroy
 
   validates :username, :gender, :age, presence: true
   validates :username, uniqueness: true
