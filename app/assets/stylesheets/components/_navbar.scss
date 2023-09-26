@@ -1,7 +1,28 @@
-.navbar-lewagon {
+.mobile-nav {
   justify-content: space-between;
   background: white;
+  position: fixed;
+  bottom: 0;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
 }
+
+.bloc-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bloc-icon i {
+  font-size: 30px;
+}
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;

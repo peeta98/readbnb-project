@@ -1,6 +1,8 @@
-<h1>All books!</h1>
-<ul>
-  <% @books.each do |book| %>
-    <li><%= link_to book.name, book_path(book) %></li>
-  <% end %>
-</ul>
+<div class="books-page-container">
+  <h1 class="text-center">Books by <span class="orange">Category</span></h1>
+  <ul>
+    <% @books.each do |book| %>
+      <li><%= link_to book.name, book_path(book) %></li>
+    <% end %>
+  </ul>
+</div>

@@ -13,6 +13,6 @@
   <body>
     <%= render "shared/flashes" %>
     <%= yield %>
-    <%= render "shared/navbar" if user_signed_in? %>
+    <%= render "shared/navbar" unless controller.controller_name == "pages" %>
   </body>
 </html>

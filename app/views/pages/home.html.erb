@@ -1,9 +1,13 @@
 <div class="home-page-container text-center">
-  <%= image_tag('home-page.jpg', class:'home-page-image') %>
+  <%= image_tag('home-page.png', class:'home-page-image') %>
   <h4>Welcome to</h4>
   <h1>Read<span class = "orange">bnb</span></h1>
-  <p>How many books have you read?</p>
+  <p>How many books have you read?<p>
 
-  <%= link_to "Log in" %>
-  <%= link_to "Sign up" %>
+  <% if user_signed_in? %>
+    <%= link_to "Start",  books_path, class: "btn btn-orange my-3" %>
+  <% else %>
+    <%= link_to "Log in",  new_user_session_path, class: "btn btn-orange my-3" %>
+    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-white" %>
+  <% end %>
 </div>

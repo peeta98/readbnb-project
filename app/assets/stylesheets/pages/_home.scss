@@ -3,17 +3,62 @@ body {
   background-color: white;
 }
 
+.btn-orange {
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  background-color: orange;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-orange:active {
+  color: orange;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid orange;
+}
+
+.btn-white {
+  width: 100%;
+  color: orange;
+  font-weight: bold;
+  border: 1px solid orange;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.btn-white:active {
+  color: white;
+  background-color: orange;
+  transition: all 0.3s ease-in-out;
+}
+
 .home-page-container {
   margin: 0 auto;
-  padding: 50px;
+  padding: 100px 50px 50px;
+  h4 {
+    font-size: 32px;
+    margin-bottom: 0px;
+  }
 
+  h1 {
+    font-size: 64px;
+    margin-bottom: 0px;
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
 }
 
 .home-page-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 100%;
 }
 
 .orange {
